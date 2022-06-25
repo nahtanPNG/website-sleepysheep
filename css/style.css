@@ -1,0 +1,956 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 500px) {
+/* Home */
+
+    header{
+        width: 100%;
+        height: 5em;
+        background-color: #4D65B4;
+    }
+    .checkbox-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .checkbox{
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        right: 0;
+        top:-5px;
+        display:flex;
+        justify-content: center;
+        cursor: pointer;
+        z-index:9999;
+        transition: 400ms ease-in-out 0s;
+    }
+    .checkbox .trace {
+        width: 50px;
+        height: 1px;
+        background-color: #B3C1F2;
+        position: absolute;
+        border-radius: 4px;
+        transition: 0.5s ease-in-out;
+    }
+    .checkbox .trace:nth-child(1){
+        top: 26px;
+        transform: rotate(0);
+    }
+    .checkbox .trace:nth-child(2){
+        top: 46px;
+        transform: rotate(0);
+    }
+    .checkbox .trace:nth-child(3){
+        top: 66px;
+        transform: rotate(0);
+    }
+    
+    #toggle{
+        display:none;
+    }
+    
+    .menu{
+        position: absolute;
+        top:28px;
+        right:30px;
+        background-color: transparent;
+        height: 4px;
+        width: 10px;
+        box-shadow: 0px 0px 0px 0px white;
+        z-index: -1;
+        transition: 400ms ease-in-out 0s;
+    }
+    .menu-items{
+        position: fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 2;
+        opacity:0;
+        visibility: hidden;
+        transition: 400ms ease-in-out;
+        background-color: white;
+    }
+    .menu-items ul{
+        list-style-type: none;
+    }
+    .menu-items ul li a{
+    margin:10px 0;
+    color: #4D65B4;
+    text-decoration: none;
+    font-size:40px;
+    font-family: Poppins;
+    }
+    .menu-items ul li a:hover{
+        color:#000000;
+        transition: 400ms ease-in-out;
+    }
+    #toggle:checked + .checkbox .trace:nth-child(1) {
+        transform: rotate(45deg);
+        top:47px;
+        background-color: black;
+    }
+    #toggle:checked + .checkbox .trace:nth-child(2) {
+        transform: translate(-100px);
+        width: 30px;
+        visibility: hidden;
+        opacity:0;
+    }
+    #toggle:checked + .checkbox .trace:nth-child(3) {
+        transform: rotate(-45deg);
+        top:48px;
+        background-color: black;
+    }
+    
+    #toggle:checked + .checkbox{
+        background-color: white;
+    }
+    #toggle:checked ~ .menu{
+        box-shadow: 0px 0px 0px 100vmax #f1f1f1;
+        z-index:1;
+        height: 100%;
+    }
+    
+    #toggle:checked ~ .menu-items{
+        visibility: visible;
+        opacity: 1;
+    }
+    .logo{
+        align-items: center;
+        justify-content: center;
+        width: 126px;
+    }
+    .post1{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgpost{
+        width: 350px;
+        height: 294px;
+    }
+    .desc{
+        width: 370px;
+    }
+    .titulopost{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 50px;
+    color: #7088D7;
+    text-align: left;
+    }
+    .descpost{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.333333px;
+    color: #030B0D;
+    text-align: left;
+    }
+    .datapost{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.333333px;
+    color: #030B0D;
+    }
+    .lermais{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.333333px;
+    color: #7088D7;
+    cursor: pointer;
+    }
+    footer{
+    display: flex;
+    flex-direction: column;
+    bottom: 0px;
+    width: 100%;
+    height: 17em;
+    background: #4D65B4;
+    }
+    .descfooter{
+    width: 300px;
+    text-align: left;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.333333px;
+    color: #FFFFFF;
+    margin-left: 25px;
+    margin-top: 20px;
+    }
+    .copy{
+        margin-top: 100px;
+    }
+
+/* Post1 */
+    .post{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulofull{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: -0.333333px;
+    color: #7088D7;
+    }
+    .imgpostfull{
+    width: 390px;
+    height: 230px;
+    }
+    .descfull{
+    margin-left: 15px;
+    margin-top: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.333333px;
+    color: #030B0D;
+    text-align: left;
+    }
+
+/* Sobre */
+    .sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .logosobre{
+        width: 400px;
+    }
+
+    .descsobre1{
+    margin-top: 10px;
+    width: 380px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.333333px;
+    color: #030B0D;
+    text-align: center;
+    }
+    .tituloequipe{
+    margin-top: 50px;
+    width: 144px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: -0.333333px;
+    color: #7088D7;
+    }
+
+    .equipe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+    .integrante{
+    margin-top: 10px;
+    border-radius: 160px;
+    width: 140px;
+    }
+    .nome{
+    margin-top: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.333333px;
+    color: #000000;
+    }
+
+
+/* JOGOS */
+    .trabalhando{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 600px;
+    }
+    .jogostitulo{
+    margin-top: 50px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: -0.333333px;
+    color: #7088D7;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 1336px) {
+    /* Home */
+    
+        header{
+            width: 100%;
+            height: 5em;
+            background-color: #4D65B4;
+        }
+        .checkbox-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .checkbox{
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            right: 0;
+            top:-5px;
+            display:flex;
+            justify-content: center;
+            cursor: pointer;
+            z-index:9999;
+            transition: 400ms ease-in-out 0s;
+        }
+        .checkbox .trace {
+            width: 50px;
+            height: 1px;
+            background-color: #B3C1F2;
+            position: absolute;
+            border-radius: 4px;
+            transition: 0.5s ease-in-out;
+        }
+        .checkbox .trace:nth-child(1){
+            top: 26px;
+            transform: rotate(0);
+        }
+        .checkbox .trace:nth-child(2){
+            top: 46px;
+            transform: rotate(0);
+        }
+        .checkbox .trace:nth-child(3){
+            top: 66px;
+            transform: rotate(0);
+        }
+        
+        #toggle{
+            display:none;
+        }
+        
+        .menu{
+            position: absolute;
+            top:28px;
+            right:30px;
+            background-color: transparent;
+            height: 4px;
+            width: 10px;
+            box-shadow: 0px 0px 0px 0px white;
+            z-index: -1;
+            transition: 400ms ease-in-out 0s;
+        }
+        .menu-items{
+            position: fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 2;
+            opacity:0;
+            visibility: hidden;
+            transition: 400ms ease-in-out;
+            background-color: white;
+        }
+        .menu-items ul{
+            list-style-type: none;
+        }
+        .menu-items ul li a{
+        margin:10px 0;
+        color: #4D65B4;
+        text-decoration: none;
+        font-size:40px;
+        font-family: Poppins;
+        }
+        .menu-items ul li a:hover{
+            color:#000000;
+            transition: 400ms ease-in-out;
+        }
+        #toggle:checked + .checkbox .trace:nth-child(1) {
+            transform: rotate(45deg);
+            top:47px;
+            background-color: black;
+        }
+        #toggle:checked + .checkbox .trace:nth-child(2) {
+            transform: translate(-100px);
+            width: 30px;
+            visibility: hidden;
+            opacity:0;
+        }
+        #toggle:checked + .checkbox .trace:nth-child(3) {
+            transform: rotate(-45deg);
+            top:48px;
+            background-color: black;
+        }
+        
+        #toggle:checked + .checkbox{
+            background-color: white;
+        }
+        #toggle:checked ~ .menu{
+            box-shadow: 0px 0px 0px 100vmax #f1f1f1;
+            z-index:1;
+            height: 100%;
+        }
+        
+        #toggle:checked ~ .menu-items{
+            visibility: visible;
+            opacity: 1;
+        }
+        .logo{
+            align-items: center;
+            justify-content: center;
+            width: 126px;
+        }
+        .post1{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .imgpost{
+            width: 450px;
+            height: 400px;
+        }
+        .desc{
+            margin-left: 30px;
+            width: 420px;
+        }
+        .titulopost{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 33px;
+        line-height: 50px;
+        color: #7088D7;
+        text-align: left;
+        }
+        .descpost{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.333333px;
+        color: #030B0D;
+        text-align: left;
+        text-align: justify;
+        }
+        .datapost{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.333333px;
+        color: #030B0D;
+        }
+        .lermais{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.333333px;
+        color: #7088D7;
+        cursor: pointer;
+        }
+        footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom: 0px;
+        width: 100%;
+        height: 17em;
+        background: #4D65B4;
+        }
+        .descfooter{
+        width: 400px;
+        text-align: center;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: -0.333333px;
+        color: #FFFFFF;
+        margin-left: 25px;
+        margin-top: 20px;
+        }
+        .copy{
+            margin-top: 100px;
+        }
+    
+    /* Post1 */
+        .post{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .titulofull{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 68px;
+        text-align: center;
+        letter-spacing: -0.333333px;
+        color: #7088D7;
+        }
+        .imgpostfull{
+        width: 800px;
+        height: 230px;
+        }
+        .desc1{
+            margin-top: 10px;
+            width: 800px;
+        }
+        .descfull{
+            width: 800px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 36px;
+            letter-spacing: -0.333333px;
+            color: #030B0D;
+            text-align: justify;
+            }
+    
+    /* Sobre */
+        .sobre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        .logosobre{
+            width: 400px;
+        }
+    
+        .descsobre1{
+        margin-top: 10px;
+        width: 380px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 19px;
+        line-height: 29px;
+        color: #030B0D;
+        text-align: center;
+        }
+        .tituloequipe{
+        margin-top: 50px;
+        width: 150px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        letter-spacing: -0.333333px;
+        color: #7088D7;
+        }
+    
+        .equipe{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        }
+        .integrante{
+        margin-top: 10px;
+        border-radius: 160px;
+        width: 140px;
+        }
+        .nome{
+        margin-top: 10px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: -0.333333px;
+        color: #000000;
+        }
+        /* JOGOS */
+    .trabalhando{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .jogostitulo{
+    margin-top: 50px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: -0.333333px;
+    color: #7088D7;
+    height: 300px;
+    }
+    }
+@media only screen and (min-width: 1336px) and (max-width: 1920px) {
+        /* Home */
+        
+            header{
+                width: 100%;
+                height: 5em;
+                background-color: #4D65B4;
+            }
+            .checkbox-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .checkbox{
+                height: 100px;
+                width: 100px;
+                position: absolute;
+                right: 0;
+                top:-5px;
+                display:flex;
+                justify-content: center;
+                cursor: pointer;
+                z-index:9999;
+                transition: 400ms ease-in-out 0s;
+            }
+            .checkbox .trace {
+                width: 50px;
+                height: 1px;
+                background-color: #B3C1F2;
+                position: absolute;
+                border-radius: 4px;
+                transition: 0.5s ease-in-out;
+            }
+            .checkbox .trace:nth-child(1){
+                top: 26px;
+                transform: rotate(0);
+            }
+            .checkbox .trace:nth-child(2){
+                top: 46px;
+                transform: rotate(0);
+            }
+            .checkbox .trace:nth-child(3){
+                top: 66px;
+                transform: rotate(0);
+            }
+            
+            #toggle{
+                display:none;
+            }
+            
+            .menu{
+                position: absolute;
+                top:28px;
+                right:30px;
+                background-color: transparent;
+                height: 4px;
+                width: 10px;
+                box-shadow: 0px 0px 0px 0px white;
+                z-index: -1;
+                transition: 400ms ease-in-out 0s;
+            }
+            .menu-items{
+                position: fixed;
+                top:0;
+                left:0;
+                width:100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                z-index: 2;
+                opacity:0;
+                visibility: hidden;
+                transition: 400ms ease-in-out;
+                background-color: white;
+            }
+            .menu-items ul{
+                list-style-type: none;
+            }
+            .menu-items ul li a{
+            margin:10px 0;
+            color: #4D65B4;
+            text-decoration: none;
+            font-size:40px;
+            font-family: Poppins;
+            }
+            .menu-items ul li a:hover{
+                color:#000000;
+                transition: 400ms ease-in-out;
+            }
+            #toggle:checked + .checkbox .trace:nth-child(1) {
+                transform: rotate(45deg);
+                top:47px;
+                background-color: black;
+            }
+            #toggle:checked + .checkbox .trace:nth-child(2) {
+                transform: translate(-100px);
+                width: 30px;
+                visibility: hidden;
+                opacity:0;
+            }
+            #toggle:checked + .checkbox .trace:nth-child(3) {
+                transform: rotate(-45deg);
+                top:48px;
+                background-color: black;
+            }
+            
+            #toggle:checked + .checkbox{
+                background-color: white;
+            }
+            #toggle:checked ~ .menu{
+                box-shadow: 0px 0px 0px 100vmax #f1f1f1;
+                z-index:1;
+                height: 100%;
+            }
+            
+            #toggle:checked ~ .menu-items{
+                visibility: visible;
+                opacity: 1;
+            }
+            .logo{
+                align-items: center;
+                justify-content: center;
+                width: 126px;
+            }
+            .post1{
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .imgpost{
+                width: 450px;
+                height: 400px;
+            }
+            .desc{
+                margin-left: 30px;
+                width: 420px;
+            }
+            .titulopost{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 33px;
+            line-height: 50px;
+            color: #7088D7;
+            text-align: left;
+            }
+            .descpost{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.333333px;
+            color: #030B0D;
+            text-align: left;
+            text-align: justify;
+            }
+            .datapost{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.333333px;
+            color: #030B0D;
+            }
+            .lermais{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.333333px;
+            color: #7088D7;
+            cursor: pointer;
+            }
+            footer{
+            display: flex;
+            bottom: 0px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 200px;
+            width: 100%;
+            height: 17em;
+            background: #4D65B4;
+            }
+            .descfooter{
+            width: 400px;
+            text-align: center;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 200;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: -0.333333px;
+            color: #FFFFFF;
+            margin-left: 25px;
+            margin-top: 20px;
+            }
+            .copy{
+                margin-top: 100px;
+            }
+        
+        /* Post1 */
+            .post{
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .titulofull{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 60px;
+            line-height: 68px;
+            text-align: center;
+            letter-spacing: -0.333333px;
+            color: #7088D7;
+            }
+            .imgpostfull{
+            width: 800px;
+            height: 230px;
+            }
+            .desc1{
+                margin-top: 10px;
+                width: 800px;
+            }
+            .descfull{
+                width: 800px;
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 36px;
+                letter-spacing: -0.333333px;
+                color: #030B0D;
+                text-align: justify;
+                }
+        
+        /* Sobre */
+            .sobre{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            .logosobre{
+                width: 400px;
+            }
+        
+            .descsobre1{
+            margin-top: 10px;
+            width: 380px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 19px;
+            line-height: 29px;
+            color: #030B0D;
+            text-align: center;
+            }
+            .tituloequipe{
+            margin-top: 50px;
+            width: 150px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 35px;
+            letter-spacing: -0.333333px;
+            color: #7088D7;
+            }
+        
+            .equipe{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            }
+            .integrante{
+            margin-top: 10px;
+            border-radius: 160px;
+            width: 140px;
+            }
+            .nome{
+            margin-top: 10px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            letter-spacing: -0.333333px;
+            color: #000000;
+            }
+            /* JOGOS */
+        .trabalhando{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .jogostitulo{
+    margin-top: 50px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: -0.333333px;
+    color: #7088D7;
+    height: 300px;
+    }
+        }

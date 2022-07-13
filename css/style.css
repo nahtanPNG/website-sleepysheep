@@ -112,6 +112,7 @@ body{
             color:#000000;
             transition: 400ms ease-in-out;
         }
+        
         #toggle:checked + .checkbox .trace:nth-child(1) {
             transform: rotate(45deg);
             top:47px;

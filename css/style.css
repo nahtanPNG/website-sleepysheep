@@ -112,7 +112,7 @@ body{
             color:#000000;
             transition: 400ms ease-in-out;
         }
-        
+       
         #toggle:checked + .checkbox .trace:nth-child(1) {
             transform: rotate(45deg);
             top:47px;
@@ -175,14 +175,13 @@ body{
         text-align: left;
         }
         .descpost{
-            width: 350px;
+        width: 350px;
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.333333px;
-        color: #030B0D;
         text-align: left;
         }
         .datapost{
@@ -192,7 +191,6 @@ body{
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.333333px;
-        color: #030B0D;
         }
         .lermais{
         font-family: 'Poppins';
@@ -262,7 +260,6 @@ body{
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.333333px;
-        color: #030B0D;
         text-align: left;
         }
     
@@ -286,7 +283,6 @@ body{
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.333333px;
-        color: #030B0D;
         text-align: center;
         }
         .tituloequipe{
@@ -322,7 +318,6 @@ body{
         line-height: 30px;
         text-align: center;
         letter-spacing: -0.333333px;
-        color: #000000;
         }
     
     

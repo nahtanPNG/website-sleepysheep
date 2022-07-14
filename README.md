@@ -11,7 +11,7 @@
   
   # Future updates </br>
   ⮞ Add blog system </br>
-  ⮞ Add a dark mode button with <b>JavaScript</b>
+  ⮞ Add a dark mode button with <b>JavaScript</b> - Done!
   
   # Pictures of the site
   

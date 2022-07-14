@@ -143,6 +143,19 @@ body{
             visibility: visible;
             opacity: 1;
         }
+        #botao{
+            width: 180px;
+            font-family: Poppins;
+            font-size: 30px;
+            border-radius: 20px;
+            border-style: none;
+            background-color: #4D65B4;
+            color: white;
+        }
+        #botao:hover{
+            background-color: white;
+            color: black;
+        }
         .logo{
             align-items: center;
             justify-content: center;
@@ -460,6 +473,19 @@ body{
         visibility: visible;
         opacity: 1;
     }
+    #botao{
+        width: 180px;
+        font-family: Poppins;
+        font-size: 30px;
+        border-radius: 20px;
+        border-style: none;
+        background-color: #4D65B4;
+        color: white;
+    }
+    #botao:hover{
+        background-color: white;
+        color: black;
+    }
     .logo{
         align-items: center;
         justify-content: center;
@@ -496,7 +522,6 @@ body{
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.333333px;
-    color: #030B0D;
     text-align: left;
     }
     .datapost{
@@ -506,7 +531,6 @@ body{
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.333333px;
-    color: #030B0D;
     }
     .lermais{
     font-family: 'Poppins';
@@ -576,7 +600,6 @@ body{
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.333333px;
-    color: #030B0D;
     text-align: left;
     }
 
@@ -600,7 +623,6 @@ body{
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.333333px;
-    color: #030B0D;
     text-align: center;
     }
     .tituloequipe{
@@ -636,7 +658,6 @@ body{
     line-height: 30px;
     text-align: center;
     letter-spacing: -0.333333px;
-    color: #000000;
     }
 
 
@@ -779,6 +800,19 @@ body{
             visibility: visible;
             opacity: 1;
         }
+        #botao{
+            width: 180px;
+            font-family: Poppins;
+            font-size: 30px;
+            border-radius: 20px;
+            border-style: none;
+            background-color: #4D65B4;
+            color: white;
+        }
+        #botao:hover{
+            background-color: white;
+            color: black;
+        }
         .logo{
             align-items: center;
             justify-content: center;
@@ -816,7 +850,6 @@ body{
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.333333px;
-        color: #030B0D;
         text-align: left;
         text-align: justify;
         }
@@ -827,7 +860,6 @@ body{
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.333333px;
-        color: #030B0D;
         }
         .lermais{
         font-family: 'Poppins';
@@ -900,7 +932,6 @@ body{
             font-size: 18px;
             line-height: 36px;
             letter-spacing: -0.333333px;
-            color: #030B0D;
             text-align: justify;
             }
     
@@ -923,7 +954,6 @@ body{
         font-weight: 300;
         font-size: 19px;
         line-height: 29px;
-        color: #030B0D;
         text-align: center;
         }
         .tituloequipe{
@@ -959,7 +989,6 @@ body{
         line-height: 30px;
         text-align: center;
         letter-spacing: -0.333333px;
-        color: #000000;
         }
         /* JOGOS */
     .trabalhando{
@@ -1100,6 +1129,19 @@ body{
                 visibility: visible;
                 opacity: 1;
             }
+            #botao{
+                width: 180px;
+                font-family: Poppins;
+                font-size: 30px;
+                border-radius: 20px;
+                border-style: none;
+                background-color: #4D65B4;
+                color: white;
+            }
+            #botao:hover{
+                background-color: white;
+                color: black;
+            }
             .logo{
                 align-items: center;
                 justify-content: center;
@@ -1138,7 +1180,6 @@ body{
             font-size: 16px;
             line-height: 24px;
             letter-spacing: -0.333333px;
-            color: #030B0D;
             text-align: left;
             text-align: justify;
             }
@@ -1149,7 +1190,6 @@ body{
             font-size: 16px;
             line-height: 24px;
             letter-spacing: -0.333333px;
-            color: #030B0D;
             }
             .lermais{
             font-family: 'Poppins';
@@ -1222,7 +1262,6 @@ body{
                 font-size: 18px;
                 line-height: 36px;
                 letter-spacing: -0.333333px;
-                color: #030B0D;
                 text-align: justify;
                 }
         
@@ -1245,7 +1284,6 @@ body{
             font-weight: 300;
             font-size: 19px;
             line-height: 29px;
-            color: #030B0D;
             text-align: center;
             }
             .tituloequipe{
@@ -1281,7 +1319,6 @@ body{
             line-height: 30px;
             text-align: center;
             letter-spacing: -0.333333px;
-            color: #000000;
             }
             /* JOGOS */
         .trabalhando{
@@ -1314,3 +1351,21 @@ body{
         from {margin-top: 0px;}
         to {margin-top: 50px;}
          }
+
+.darkmode{
+    background-color: #161616;
+    color: white;
+}
+
+.darkmode .menu-items{
+    background-color: #161616;
+}
+.darkmode #toggle:checked + .checkbox{
+    background-color: #161616;
+}
+.darkmode .menu-items ul li a:hover{
+    color: white;
+}
+.darkmode .menu{
+    box-shadow: 0px 0px 0px 0px #161616;
+}
